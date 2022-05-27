@@ -13,7 +13,7 @@ async def send_to_admin(dp):
 @dp.message_handler(commands=['start'])
 async def process_start_command(message: types.Message):
     chat_id = message.chat.id
-    await message.reply("id чата:<b>"+str(chat_id )+"</b>\n")
+    await bot.send_message(chat_id=chat_id, text="id чата:<b>"+str(chat_id )+"</b>")
 
 # слушаем сообщения
 @dp.message_handler()
